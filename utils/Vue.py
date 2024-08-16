@@ -205,7 +205,7 @@ class Folder_Processing(object):
         # fenetre principale
         fenetre = tkinter.Tk()
         fenetre.title("Create PDF")
-        fenetre.geometry("800x300")
+        fenetre.geometry("800x200")
         fenetre.resizable(0, 0)
         # menu
         menu = tkinter.Menu(fenetre)
@@ -229,7 +229,7 @@ class Folder_Processing(object):
         label_date.grid(row=2,column=0)
         label_date.config(text = "Date choisie :")
         
-        entry_date = tkinter.Entry(fenetre)
+        entry_date = tkinter.Entry(fenetre, width=50)
         entry_date.grid(row=2,column=1)
         
         ### File_name
@@ -237,7 +237,7 @@ class Folder_Processing(object):
         label_nom_pdf.grid(row=3,column=0)
         label_nom_pdf.config(text = "Choisir nom .pdf :")
         
-        entry_file_name = tkinter.Entry(fenetre)
+        entry_file_name = tkinter.Entry(fenetre, width=50)
         entry_file_name.grid(row=3,column=1)
         
         ### Reader
@@ -245,7 +245,7 @@ class Folder_Processing(object):
         label_reader.grid(row=4,column=0)
         label_reader.config(text = "Lecteur :")
         
-        entry_reader = tkinter.Entry(fenetre)
+        entry_reader = tkinter.Entry(fenetre, width=50)
         entry_reader.grid(row=4,column=1)
         
         ### Institute
@@ -253,7 +253,7 @@ class Folder_Processing(object):
         label_institute.grid(row=5,column=0)
         label_institute.config(text = "Institution :")
         
-        entry_institute = tkinter.Entry(fenetre)
+        entry_institute = tkinter.Entry(fenetre, width=50)
         entry_institute.grid(row=5,column=1)
         
         ### Archivist
@@ -261,7 +261,7 @@ class Folder_Processing(object):
         label_archivist.grid(row=6,column=0)
         label_archivist.config(text = "Archiviste :")
         
-        entry_archivist = tkinter.Entry(fenetre)
+        entry_archivist = tkinter.Entry(fenetre, width=50)
         entry_archivist.grid(row=6,column=1)
         
         
@@ -271,8 +271,8 @@ class Folder_Processing(object):
         button6.grid(row=7,column=1)
         
         
-        fenetre.grid_columnconfigure(0, minsize=300)
-        fenetre.grid_columnconfigure(0, minsize=500)
+        fenetre.grid_columnconfigure(0, minsize=250)
+        fenetre.grid_columnconfigure(1, minsize=800-250)
         for i in range(7):
             
             fenetre.grid_rowconfigure(i+1, minsize=13)

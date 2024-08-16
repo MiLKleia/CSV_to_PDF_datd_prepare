@@ -17,7 +17,7 @@ PATH = 'base.csv'
 
 def get_std_lines(date, reader, institute, archivist):
     lines = []
-    string = ('Date : ' + date + '\t' + 'Archivist : ' + archivist ).expandtabs(60)
+    string = ('Date : ' + date + '\t' + 'Archiviste : ' + archivist ).expandtabs(60)
     lines.append(string)
     string = "Nom du lecteur : " + reader
     lines.append(string)
